@@ -8,7 +8,7 @@
   <title>Code Commerce</title>
   <!-- AngularJS -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/angular@1.7.3/angular.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
@@ -20,18 +20,11 @@
 </head>
 
 <body>
-  <!-- AngularJS App Container -->
-  <div id="angular-app" data-ng-app="app">
-    <div data-ng-controller="MainCtrl as vm" class="">
-      <h1 class="">{{heading}}</h1>
-      <p class="">{{text}}</p>
-    </div>
-  </div>
   
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
     <div class="container">
-      <a class="navbar-brand" href="#">Default Color</a>
+      <a class="navbar-brand" href="#">{{ store_name }}</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -87,6 +80,8 @@
   <!-- Core -->
  <script src="js/popper.min.js"></script>
  <script src="js/bootstrap.min.js"></script>
+ <!-- Database -->
+ <script src="//cdn.jsdelivr.net/gh/fauna/faunadb-js-release@latest/faunadb-min.js"></script>
   <!-- Theme JS -->
  <script src="js/argon-design-system.min.js"></script>
   <!-- Project -->
